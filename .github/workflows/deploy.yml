@@ -1,9 +1,7 @@
-name: Deploy to AWS CodePipeline
+name: Manual Deploy to AWS CodePipeline
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:  # これを追加すると、GitHub UI から手動実行可能
 
 jobs:
   deploy:
