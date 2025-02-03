@@ -1,6 +1,9 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 18
   build:
     commands:
-      - echo "Running build process..."
+      - echo "実行中。。build process..."
