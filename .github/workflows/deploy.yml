@@ -21,4 +21,4 @@ jobs:
 
       - name: Trigger AWS CodePipeline
         run: |
-          aws codepipeline start-pipeline-execution --name MyPipeline
+          aws codepipeline start-pipeline-execution --name scAwsPipeline
