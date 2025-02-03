@@ -1,7 +1,7 @@
 name: Manual Deploy to AWS CodePipeline
 
 on:
-  workflow_dispatch:  # これを追加すると、GitHub UI から手動実行可能
+  workflow_dispatch:  # GitHub UI からの手動実行
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-northeast-1
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Trigger AWS CodePipeline
         run:  aws codepipeline start-pipeline-execution --name scAwsPipeline
